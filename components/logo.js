@@ -20,7 +20,7 @@ const LogoBox = styled.span`
 import React from 'react'
 
 const Logo = () => {
-  const cloverImg = `/images/clover${useColorModeValue('', '-dark')}.png`
+  const cloverImg = `/images/clover.png`
 
   return (
     <Link href="/">
