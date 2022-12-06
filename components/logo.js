@@ -24,7 +24,6 @@ const Logo = () => {
 
   return (
     <Link href="/">
-      <a>
         <LogoBox>
           <Image src={cloverImg} width={20} height={20} alt="logo" />
           <Text
@@ -36,7 +35,6 @@ const Logo = () => {
             Fortunatov Alexey
           </Text>
         </LogoBox>
-      </a>
     </Link>
   )
 }
