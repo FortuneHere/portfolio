@@ -3,7 +3,6 @@ import NextLink from 'next/link'
 import {
   Container,
   Box,
-  Link,
   Stack,
   Heading,
   Flex,
@@ -17,21 +16,9 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 
-const LinkItem = ({ href, path, children }) => {
-  const active = path === href
-  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
-  return (
-    <NextLink href={href} >
-      <Link
-        p={2}
-        bg={active ? 'glassTeal' : undefined}
-        color={active ? '#202023' : inactiveColor}
-      >
-        {children}
-      </Link>
-    </NextLink>
-  )
-}
+import dynamic from 'next/dynamic'
+
+const LinkItem = dynamic(() => import('./link'), { ssr: false })
 
 const Navbar = props => {
   const { path } = props
@@ -76,7 +63,7 @@ const Navbar = props => {
         </Stack>
 
         <Box flex={1} align="right">
-          <ThemeToggleButton/>
+          <ThemeToggleButton />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>
               <MenuButton
@@ -86,15 +73,15 @@ const Navbar = props => {
                 aria-label="Options"
               />
               <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
-                </NextLink>
-                <NextLink href="/projects">
-                  <MenuItem as={Link}>Projects</MenuItem>
-                </NextLink> 
-                <NextLink href="/skills">
-                  <MenuItem as={Link}>Skills</MenuItem>
-                </NextLink> 
+                <MenuItem as={NextLink} href="/">
+                  About
+                </MenuItem>
+                <MenuItem as={NextLink} href="/projects">
+                  Projects
+                </MenuItem>
+                <MenuItem as={NextLink} href="/skills">
+                  Skills
+                </MenuItem>
               </MenuList>
             </Menu>
           </Box>
