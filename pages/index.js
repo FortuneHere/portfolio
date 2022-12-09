@@ -3,8 +3,14 @@ import {
   Box,
   Heading,
   Image,
-  useColorModeValue
+  useColorModeValue,
+  Button
 } from '@chakra-ui/react'
+import Section from '../components/section'
+import Paragraph from '../components/paragraph'
+import NextLink from 'next/link'
+import { ChevronRightIcon } from '@chakra-ui/icons'
+import { BioSection, BioYear } from '../components/bio'
 
 const Page = () => {
   return (
@@ -15,7 +21,7 @@ const Page = () => {
         p={3}
         mb={6}
       >
-        Hello, I&apos;m a full-stack developer
+        Hello, I&apos;m a front-end developer
       </Box>
 
       <Box display={{ md: 'flex' }}>
@@ -43,6 +49,50 @@ const Page = () => {
           />
         </Box>
       </Box>
+      <Section delay={0.1}>
+        <Heading as="h3" variant="section-title">
+          Work
+        </Heading>
+        <Paragraph>
+          Freelance and a front-end developer with a passion to become a fullstack.
+          Watching what technology stack is required for applying at a job.
+          Mostly specified in MERN.
+        </Paragraph>
+        <Box align="center" my={4}>
+          <NextLink href="/projects">
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              My portfolio
+            </Button>
+          </NextLink>
+        </Box>
+      </Section>
+      <Section delay={0.2}>
+        <Heading as="h3" variant="section-title">
+          Bio
+        </Heading>
+        <BioSection>
+          <BioYear>1999</BioYear>
+          Born in Kazan, Russia.
+        </BioSection>
+        <BioSection>
+          <BioYear>2020</BioYear>
+          Completed Institute of Computer Technology and Protection graduation
+          at Kazan National Research Technical University named after
+          A.N.Tupolev - KAI
+        </BioSection>
+        <BioSection>
+          <BioYear>2020 to present</BioYear>
+          Works as a freelance
+        </BioSection>
+      </Section>
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          I enjoy
+        </Heading>
+        <Paragraph>
+          Music, Movies, Technology, Learning
+        </Paragraph>
+      </Section>
     </Container>
   )
 }
