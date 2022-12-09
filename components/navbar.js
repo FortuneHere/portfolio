@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
-
+import { IoLogoGithub } from 'react-icons/io5'
 import dynamic from 'next/dynamic'
 
 const LinkItem = dynamic(() => import('./link'), { ssr: false })
@@ -60,6 +60,19 @@ const Navbar = props => {
           <LinkItem href="/skills" path={path}>
             Skills
           </LinkItem>
+          <LinkItem
+            target="_blank"
+            href="https://github.com/Kekray/fortune-homepage"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+            
+          >
+            <IoLogoGithub />
+            Source
+          </LinkItem>
         </Stack>
 
         <Box flex={1} align="right">
@@ -81,6 +94,13 @@ const Navbar = props => {
                 </MenuItem>
                 <MenuItem as={NextLink} href="/skills">
                   Skills
+                </MenuItem>
+                <MenuItem
+                  as={NextLink}
+                  href="https://github.com/Kekray/fortune-homepage"
+                  target={"_blank"}
+                >
+                  View Source
                 </MenuItem>
               </MenuList>
             </Menu>
