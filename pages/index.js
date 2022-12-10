@@ -23,7 +23,7 @@ const Page = () => {
           p={3}
           mb={6}
         >
-          Hello, I&apos;m a front-end developer
+          Hello, I&apos;m a front-end developer based in Russia, Kazan.
         </Box>
 
         <Box display={{ md: 'flex' }}>
@@ -31,7 +31,7 @@ const Page = () => {
             <Heading as="h2" variant="page-title">
               Fortunatov Alexey
             </Heading>
-            <p>Web Developer</p>
+            <p>Front-end Developer</p>
           </Box>
           <Box
             flexShrink={0}
@@ -53,12 +53,13 @@ const Page = () => {
         </Box>
         <Section delay={0.1}>
           <Heading as="h3" variant="section-title">
-            Work
+            About
           </Heading>
           <Paragraph>
-            Freelance and a front-end developer with a passion to become a
-            fullstack. Watching what technology stack is required for applying
-            at a job. Mostly specified in MERN.
+            I&apos;m an enthusiastic and detail-oriented Frontend Software Engineer
+            seeking an entry-level position with Company to use my skills in
+            coding, troubleshooting complex problems, and assisting in the
+            timely completion of projects.
           </Paragraph>
           <Box align="center" my={4}>
             <NextLink href="/projects">

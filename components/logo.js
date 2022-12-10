@@ -21,8 +21,6 @@ const LogoBox = styled.span`
   }
 `
 
-import React from 'react'
-
 const Logo = () => {
   const cloverImg = `/images/clover.png`
 
