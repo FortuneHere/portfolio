@@ -2,6 +2,11 @@ import Head from 'next/head'
 import Navbar from '../navbar'
 import { Box, Container } from '@chakra-ui/react'
 
+import dynamic from 'next/dynamic'
+
+const Moon = dynamic(() => import('../space'), {
+  ssr: false
+})
 const Main = ({ children, router }) => {
   return (
     <Box as="main" pb={8}>
@@ -13,6 +18,7 @@ const Main = ({ children, router }) => {
       <Navbar path={router.asPath} />
 
       <Container maxW="container.md" pt={14}>
+        <Moon />
         {children}
       </Container>
     </Box>
