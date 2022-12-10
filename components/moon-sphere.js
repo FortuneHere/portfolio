@@ -1,7 +1,8 @@
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import { useLoader } from '@react-three/fiber'
+import { useFrame, useLoader } from '@react-three/fiber'
 import texture from '../public/images/moon.jpg'
 import displacement from '../public/images/moon-displacement.jpg'
+import { useRef } from 'react'
 
 const Sphere = () => {
   const [moonMap, displacementMap] = useLoader(TextureLoader, [
@@ -9,8 +10,14 @@ const Sphere = () => {
     displacement.src
   ])
 
+  const myMoon = useRef()
+  useFrame(() => {
+    myMoon.current.rotation.x += 0.0001;  
+    myMoon.current.rotation.y += 0.002;
+  })
+
   return (
-    <mesh>
+    <mesh ref={myMoon}>
       <sphereGeometry attach="geometry" args={[2, 60, 60]} />
       <meshPhongMaterial
         attach="material"

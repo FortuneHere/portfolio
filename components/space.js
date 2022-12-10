@@ -1,21 +1,23 @@
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Stars } from '@react-three/drei'
+import { Canvas, useFrame } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 import Sphere from './moon-sphere'
-import { Suspense } from 'react'
+import Galaxy from './stars'
+import { Suspense, useRef } from 'react'
 import { SpaceContainer, SpaceSpinner } from './space-loader'
-
 import { useProgress } from '@react-three/drei'
 
 const Space = () => {
   const { progress } = useProgress()
+
+
 
   return (
     <SpaceContainer>
       {progress && <SpaceSpinner />}
       <Canvas>
         <Suspense fallback={null}>
-          <Stars />
-          <OrbitControls enableZoom={false} autoRotate />
+          <Galaxy />
+          <OrbitControls enableZoom={false} />
           <hemisphereLight
             color={0xffffff}
             groundColor={0xffffff}
