@@ -8,7 +8,7 @@ const Galaxy = () => {
     myStars.current.rotation.x += 0.0001
     myStars.current.rotation.y += 0.002
   })
-  return <Stars ref={myStars} />
+  return <Stars ref={myStars} count={500} />
 }
 
 export default Galaxy

@@ -1,15 +1,13 @@
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import Sphere from './moon-sphere'
 import Galaxy from './stars'
-import { Suspense, useRef } from 'react'
+import { Suspense } from 'react'
 import { SpaceContainer, SpaceSpinner } from './space-loader'
 import { useProgress } from '@react-three/drei'
 
 const Space = () => {
   const { progress } = useProgress()
-
-
 
   return (
     <SpaceContainer>
