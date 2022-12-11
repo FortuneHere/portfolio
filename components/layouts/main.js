@@ -16,7 +16,7 @@ const Main = ({ children, router }) => {
         <meta name="description" content="Alexey's homepage" />
         <meta name="author" content="Alexey Fortunatov" />
         <meta name="author" content="fortune" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/fortune-homepage/favicon.ico" type="image/x-icon" />
         <meta property="og:site_name" content="Alexey Fortunatov" />
         <meta name="og:title" content="Alexey Fortunatov" />
         <meta property="og:type" content="website" />
