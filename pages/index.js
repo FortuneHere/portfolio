@@ -157,7 +157,7 @@ const Page = () => {
 
             <ListItem>
               <Link
-                href="discordapp.com/users/260375193598296064"
+                href="https://discordapp.com/users/260375193598296064"
                 target="_blank"
               >
                 <Button
