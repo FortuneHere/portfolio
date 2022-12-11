@@ -3,11 +3,11 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 
 import SpaceLoader from '../components/space-loader'
-
+import SkillSkeleton from '../components/skeleton'
 import dynamic from 'next/dynamic'
 
 const DynamicSkillList = dynamic(() => import('../components/skill-stack'), {
-  loading: () => <SpaceLoader />
+  loading: () => <SkillSkeleton />
 })
 
 const Skills = () => {
@@ -15,7 +15,7 @@ const Skills = () => {
     <Layout title="Skills">
       <Container>
         <Heading as="h3" fontSize={20} mb={4} variant="section-title">
-          I have an experince with:{' '}
+          I have experince with:{' '}
         </Heading>
         <Section>
           <DynamicSkillList />
