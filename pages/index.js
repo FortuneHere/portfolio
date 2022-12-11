@@ -20,9 +20,7 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import { IoLogoGithub, IoLogoLinkedin, IoLogoDiscord } from 'react-icons/io5'
-
 import { SiGmail, SiHabr } from 'react-icons/si'
-
 import { FaTelegramPlane, FaYandexInternational } from 'react-icons/fa'
 
 const Page = () => {
@@ -58,7 +56,7 @@ const Page = () => {
               maxWidth="100px"
               display="inline-block"
               borderRadius="full"
-              src="/images/clover.png"
+              src="/fortune-homepage/images/clover.png"
               alt="Profile Image"
             />
           </Box>
@@ -107,7 +105,7 @@ const Page = () => {
             Contacts
           </Heading>
           <List>
-            <ListItem ml={"15px"} mt={2}>
+            <ListItem ml={'15px'} mt={2}>
               <Tag
                 colorScheme="teal"
                 bg="transparent"
@@ -169,7 +167,7 @@ const Page = () => {
                 </Button>
               </Link>
             </ListItem>
-            <ListItem ml={"15px"} mt={1}>
+            <ListItem ml={'15px'} mt={1}>
               <Tag
                 colorScheme="teal"
                 bg="transparent"
@@ -180,7 +178,7 @@ const Page = () => {
                 <TagLabel>kekray777@gmail.com</TagLabel>
               </Tag>
             </ListItem>
-            <ListItem ml={"15px"} mt={3}>
+            <ListItem ml={'15px'} mt={3}>
               <Tag
                 colorScheme="teal"
                 bg="transparent"

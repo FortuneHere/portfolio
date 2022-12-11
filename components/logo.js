@@ -22,7 +22,7 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-  const cloverImg = `/images/clover.png`
+  const cloverImg = `/fortune-homepage/images/clover.png`
 
   return (
     <Link href="/">
