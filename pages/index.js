@@ -4,7 +4,14 @@ import {
   Heading,
   Image,
   useColorModeValue,
-  Button
+  Button,
+  List,
+  ListItem,
+  Link,
+  Icon,
+  Tag,
+  TagLabel,
+  TagLeftIcon
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
@@ -12,6 +19,11 @@ import NextLink from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
+import { IoLogoGithub, IoLogoLinkedin, IoLogoDiscord } from 'react-icons/io5'
+
+import { SiGmail, SiHabr } from 'react-icons/si'
+
+import { FaTelegramPlane, FaYandexInternational } from 'react-icons/fa'
 
 const Page = () => {
   return (
@@ -56,10 +68,10 @@ const Page = () => {
             About
           </Heading>
           <Paragraph>
-            I&apos;m an enthusiastic and detail-oriented Frontend Software Engineer
-            seeking an entry-level position with Company to use my skills in
-            coding, troubleshooting complex problems, and assisting in the
-            timely completion of projects.
+            I&apos;m an enthusiastic and detail-oriented Frontend Software
+            Engineer seeking an entry-level position with Company to use my
+            skills in coding, troubleshooting complex problems, and assisting in
+            the timely completion of projects.
           </Paragraph>
           <Box align="center" my={4}>
             <NextLink href="/projects">
@@ -89,6 +101,97 @@ const Page = () => {
             I enjoy
           </Heading>
           <Paragraph>Music, Movies, Technology, Learning</Paragraph>
+        </Section>
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            Contacts
+          </Heading>
+          <List>
+            <ListItem ml={"15px"} mt={2}>
+              <Tag
+                colorScheme="teal"
+                bg="transparent"
+                size={1}
+                fontWeight="bold"
+              >
+                <TagLeftIcon as={FaTelegramPlane} />
+                <TagLabel>@FortuneThere</TagLabel>
+              </Tag>
+            </ListItem>
+            <ListItem>
+              <Link href="https://github.com/FortuneHere" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoGithub} />}
+                >
+                  @FortuneHere
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://www.linkedin.com/in/fortunehere/"
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoLinkedin} />}
+                >
+                  @FortuneHere
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://career.habr.com/fortunehere" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={SiHabr} />}
+                >
+                  @FortuneHere
+                </Button>
+              </Link>
+            </ListItem>
+
+            <ListItem>
+              <Link
+                href="discordapp.com/users/260375193598296064"
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoDiscord} />}
+                >
+                  Discord
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem ml={"15px"} mt={1}>
+              <Tag
+                colorScheme="teal"
+                bg="transparent"
+                size={1}
+                fontWeight="bold"
+              >
+                <TagLeftIcon as={SiGmail} />
+                <TagLabel>kekray777@gmail.com</TagLabel>
+              </Tag>
+            </ListItem>
+            <ListItem ml={"15px"} mt={3}>
+              <Tag
+                colorScheme="teal"
+                bg="transparent"
+                size={1}
+                fontWeight="bold"
+              >
+                <TagLeftIcon as={FaYandexInternational} />
+                <TagLabel>kekray777@yandex.ru</TagLabel>
+              </Tag>
+            </ListItem>
+          </List>
         </Section>
       </Container>
     </Layout>

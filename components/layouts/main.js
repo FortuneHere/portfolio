@@ -13,6 +13,15 @@ const Main = ({ children, router }) => {
     <Box as="main" pb={8}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Alexey's homepage" />
+        <meta name="author" content="Alexey Fortunatov" />
+        <meta name="author" content="fortune" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <meta property="og:site_name" content="Alexey Fortunatov" />
+        <meta name="og:title" content="Alexey Fortunatov" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/public/images/card.png" />
         <title>Alexey Fortunatov - Homepage</title>
       </Head>
 

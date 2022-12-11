@@ -1,6 +1,6 @@
 import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import Section from '../components/section'
-import { WorkGridItem } from '../components/grid-item'
+import { GridItem } from '../components/grid-item'
 
 import thumbTodoTsx from '../public/images/todo-app.png'
 import thumbCatsApp from '../public/images/cats-app.png'
@@ -18,40 +18,44 @@ const Projects = () => {
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section delay={0.1}>
-            <WorkGridItem
-              id="todoTsx"
+            <GridItem
+              href="https://fortunehere.github.io/TodoApp-dnd-tsx/"
               title="Todo.tsx"
               thumbnail={thumbTodoTsx}
             >
               Simple todo list with drag and drop
-            </WorkGridItem>
+            </GridItem>
           </Section>
 
           <Section delay={0.3}>
-            <WorkGridItem
-              id="catsApp"
+            <GridItem
+              href="https://fortunehere.github.io/cats-app/"
               title="Cats app"
               thumbnail={thumbCatsApp}
             >
               Watch cats pictures and save them to your favourites
-            </WorkGridItem>
+            </GridItem>
           </Section>
 
           <Section delay={0.5}>
-            <WorkGridItem
-              id="responsiveWebSite"
+            <GridItem
+              href="https://fortunehere.github.io/responsive-website-react/"
               title="Landing web site"
               thumbnail={thumbReactResponsive}
             >
               Responsive web site made with React
-            </WorkGridItem>
+            </GridItem>
           </Section>
 
           <Section delay={0.7}>
-            <WorkGridItem id="food" title="Food website" thumbnail={thumbFood}>
+            <GridItem
+              href="https://github.com/FortuneHere/Food"
+              title="Food website"
+              thumbnail={thumbFood}
+            >
               Website made on pure javascript. Contains callory calculator,
               modal window, carousell
-            </WorkGridItem>
+            </GridItem>
           </Section>
         </SimpleGrid>
       </Container>
