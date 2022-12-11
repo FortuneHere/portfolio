@@ -12,7 +12,7 @@ const Projects = () => {
   return (
     <Layout title="Projects">
       <Container>
-        <Heading as="h3" fontSize={20} mb={4}>
+        <Heading as="h3" fontSize={20} mb={4} variant="section-title">
           Projects
         </Heading>
 

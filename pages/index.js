@@ -23,7 +23,7 @@ const Page = () => {
           p={3}
           mb={6}
         >
-          Hello, I&apos;m a front-end developer based in Russia, Kazan.
+          Hello, I&apos;m a front-end developer based in Georgia, Tbilisi.
         </Box>
 
         <Box display={{ md: 'flex' }}>
@@ -82,10 +82,6 @@ const Page = () => {
             Completed Institute of Computer Technology and Protection graduation
             at Kazan National Research Technical University named after
             A.N.Tupolev - KAI
-          </BioSection>
-          <BioSection>
-            <BioYear>2020 to present</BioYear>
-            Works as a freelance
           </BioSection>
         </Section>
         <Section delay={0.3}>
