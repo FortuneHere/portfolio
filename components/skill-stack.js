@@ -36,7 +36,8 @@ import {
   SiDotnet,
   SiThreedotjs,
   SiCplusplus,
-  SiMocha
+  SiMocha,
+  SiExpress
 } from 'react-icons/si'
 
 import { TbBrandNextjs } from 'react-icons/tb'
@@ -124,6 +125,10 @@ const SkillList = () => {
         <ListItem>
           <ListIcon as={FaNodeJs} />
           Node.js
+        </ListItem>
+        <ListItem>
+          <ListIcon as={SiExpress} />
+          Express
         </ListItem>
         <ListItem>
           <ListIcon as={SiPostgresql} />
