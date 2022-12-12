@@ -62,7 +62,7 @@ const Navbar = props => {
           </LinkItem>
           <LinkItem
             target="_blank"
-            href="https://github.com/Kekray/fortune-homepage"
+            href="https://github.com/FortuneHere/portfolio"
             path={path}
             display="inline-flex"
             alignItems="center"

@@ -56,7 +56,7 @@ const Page = () => {
               maxWidth="100px"
               display="inline-block"
               borderRadius="full"
-              src="/homepage/images/clover.png"
+              src="/portfolio/images/clover.png"
               alt="Profile Image"
             />
           </Box>
