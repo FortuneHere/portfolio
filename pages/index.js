@@ -56,7 +56,7 @@ const Page = () => {
               maxWidth="100px"
               display="inline-block"
               borderRadius="full"
-              src="/fortune-homepage/images/clover.png"
+              src="/homepage/images/clover.png"
               alt="Profile Image"
             />
           </Box>

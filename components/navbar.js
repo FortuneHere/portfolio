@@ -97,7 +97,7 @@ const Navbar = props => {
                 </MenuItem>
                 <MenuItem
                   as={NextLink}
-                  href="https://github.com/Kekray/fortune-homepage"
+                  href="https://github.com/FortuneHere/portfolio"
                   target={"_blank"}
                 >
                   View Source

@@ -2,7 +2,7 @@
   "name": "fortune-homepage",
   "version": "1.0.0",
   "description": "Fortune's website",
-  "homepage": "https://fortunehere.github.io/fortune-homepage",
+  "homepage": "https://fortunehere.github.io/homepage",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
