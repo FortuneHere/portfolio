@@ -105,17 +105,6 @@ const Page = () => {
             Contacts
           </Heading>
           <List>
-            <ListItem ml={'15px'} mt={2}>
-              <Tag
-                colorScheme="teal"
-                bg="transparent"
-                size={1}
-                fontWeight="bold"
-              >
-                <TagLeftIcon as={FaTelegramPlane} />
-                <TagLabel>@FortuneThere</TagLabel>
-              </Tag>
-            </ListItem>
             <ListItem>
               <Link href="https://github.com/FortuneHere" target="_blank">
                 <Button
@@ -167,7 +156,18 @@ const Page = () => {
                 </Button>
               </Link>
             </ListItem>
-            <ListItem ml={'15px'} mt={1}>
+            <ListItem ml={'16px'} mt={2}>
+              <Tag
+                colorScheme="teal"
+                bg="transparent"
+                size={1}
+                fontWeight="bold"
+              >
+                <TagLeftIcon as={FaTelegramPlane} />
+                <TagLabel>@FortuneThere</TagLabel>
+              </Tag>
+            </ListItem>
+            <ListItem ml={'16px'} mt={2}>
               <Tag
                 colorScheme="teal"
                 bg="transparent"
@@ -178,7 +178,7 @@ const Page = () => {
                 <TagLabel>kekray777@gmail.com</TagLabel>
               </Tag>
             </ListItem>
-            <ListItem ml={'15px'} mt={3}>
+            <ListItem ml={'16px'} mt={2}>
               <Tag
                 colorScheme="teal"
                 bg="transparent"
