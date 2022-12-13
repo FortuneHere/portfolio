@@ -1,4 +1,10 @@
-import { Box, List, ListIcon, ListItem, useColorModeValue } from '@chakra-ui/react'
+import {
+  Box,
+  List,
+  ListIcon,
+  ListItem,
+  useColorModeValue
+} from '@chakra-ui/react'
 
 import {
   FaLinux,
@@ -13,7 +19,8 @@ import {
   FaGithub,
   FaPython,
   FaRegObjectGroup,
-  FaPhp
+  FaPhp,
+  FaNodeJs
 } from 'react-icons/fa'
 
 import {
@@ -28,7 +35,9 @@ import {
   SiCsharp,
   SiDotnet,
   SiThreedotjs,
-  SiCplusplus
+  SiCplusplus,
+  SiMocha,
+  SiExpress
 } from 'react-icons/si'
 
 import { TbBrandNextjs } from 'react-icons/tb'
@@ -114,12 +123,24 @@ const SkillList = () => {
           JSON
         </ListItem>
         <ListItem>
+          <ListIcon as={FaNodeJs} />
+          Node.js
+        </ListItem>
+        <ListItem>
+          <ListIcon as={SiExpress} />
+          Express
+        </ListItem>
+        <ListItem>
           <ListIcon as={SiPostgresql} />
           PostgreSQL
         </ListItem>
         <ListItem>
           <ListIcon as={SiMongodb} />
           MongoDB
+        </ListItem>
+        <ListItem>
+          <ListIcon as={SiMocha} />
+          Mocha
         </ListItem>
         <ListItem>
           <ListIcon as={FaBootstrap} />
@@ -166,7 +187,6 @@ const SkillList = () => {
           <ListIcon as={FaPython} />
           Python
         </ListItem>
-
         <ListItem>
           <ListIcon as={FaRegObjectGroup} />
           OOP
