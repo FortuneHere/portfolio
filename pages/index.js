@@ -21,9 +21,28 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import { IoLogoGithub, IoLogoLinkedin, IoLogoDiscord } from 'react-icons/io5'
 import { SiGmail, SiHabr } from 'react-icons/si'
-import { FaTelegramPlane, FaYandexInternational } from 'react-icons/fa'
+import {
+  FaFilePdf,
+  FaTelegramPlane,
+  FaYandexInternational
+} from 'react-icons/fa'
 
 const Page = () => {
+  const downloadPDF = () => {
+    // using Java Script method to get PDF file
+    fetch('/portfolio/resume.pdf').then(response => {
+      response.blob().then(blob => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob)
+        // Setting various property values
+        let alink = document.createElement('a')
+        alink.href = fileURL
+        alink.download = 'resume.pdf'
+        alink.click()
+      })
+    })
+  }
+
   return (
     <Layout>
       <Container>
@@ -155,6 +174,16 @@ const Page = () => {
                   Discord
                 </Button>
               </Link>
+            </ListItem>
+            <ListItem>
+              <Button
+                onClick={downloadPDF}
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<Icon as={FaFilePdf} />}
+              >
+                Download PDF resume
+              </Button>
             </ListItem>
             <ListItem ml={'16px'} mt={2}>
               <Tag
