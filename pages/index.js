@@ -11,7 +11,8 @@ import {
   Icon,
   Tag,
   TagLabel,
-  TagLeftIcon
+  TagLeftIcon,
+  Text
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
@@ -187,7 +188,7 @@ const Page = () => {
             </ListItem>
             <ListItem ml={'16px'} mt={2}>
               <Tag
-                colorScheme="teal"
+                color={useColorModeValue('teal.600', 'teal.200')}
                 bg="transparent"
                 size={1}
                 fontWeight="bold"
@@ -196,9 +197,9 @@ const Page = () => {
                 <TagLabel>@FortuneThere</TagLabel>
               </Tag>
             </ListItem>
-            <ListItem ml={'16px'} mt={2}>
+            <ListItem ml={'19px'} mt={2}>
               <Tag
-                colorScheme="teal"
+                color={useColorModeValue('teal.600', 'teal.200')}
                 bg="transparent"
                 size={1}
                 fontWeight="bold"
@@ -207,15 +208,16 @@ const Page = () => {
                 <TagLabel>kekray777@gmail.com</TagLabel>
               </Tag>
             </ListItem>
-            <ListItem ml={'16px'} mt={2}>
+            <ListItem ml={'19px'} mt={2}>
               <Tag
-                colorScheme="teal"
+                color={useColorModeValue('teal.600', 'teal.200')}
                 bg="transparent"
                 size={1}
                 fontWeight="bold"
               >
                 <TagLeftIcon as={FaYandexInternational} />
-                <TagLabel>kekray777@yandex.ru</TagLabel>
+                {/* <TagLabel>kekray777@yandex.ru</TagLabel> */}
+                <Text colorScheme="teal">kekray777@yandex.ru</Text>
               </Tag>
             </ListItem>
           </List>
