@@ -216,7 +216,6 @@ const Page = () => {
                 fontWeight="bold"
               >
                 <TagLeftIcon as={FaYandexInternational} />
-                {/* <TagLabel>kekray777@yandex.ru</TagLabel> */}
                 <Text colorScheme="teal">kekray777@yandex.ru</Text>
               </Tag>
             </ListItem>
