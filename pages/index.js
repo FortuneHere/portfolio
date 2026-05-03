@@ -11,7 +11,8 @@ import {
   Icon,
   Tag,
   TagLabel,
-  TagLeftIcon
+  TagLeftIcon,
+  Text
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
@@ -21,9 +22,28 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import { IoLogoGithub, IoLogoLinkedin, IoLogoDiscord } from 'react-icons/io5'
 import { SiGmail, SiHabr } from 'react-icons/si'
-import { FaTelegramPlane, FaYandexInternational } from 'react-icons/fa'
+import {
+  FaFilePdf,
+  FaTelegramPlane,
+  FaYandexInternational
+} from 'react-icons/fa'
 
 const Page = () => {
+  const downloadPDF = () => {
+    // using Java Script method to get PDF file
+    fetch('/portfolio/resume.pdf').then(response => {
+      response.blob().then(blob => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob)
+        // Setting various property values
+        let alink = document.createElement('a')
+        alink.href = fileURL
+        alink.download = 'resume.pdf'
+        alink.click()
+      })
+    })
+  }
+
   return (
     <Layout>
       <Container>
@@ -105,17 +125,6 @@ const Page = () => {
             Contacts
           </Heading>
           <List>
-            <ListItem ml={'15px'} mt={2}>
-              <Tag
-                colorScheme="teal"
-                bg="transparent"
-                size={1}
-                fontWeight="bold"
-              >
-                <TagLeftIcon as={FaTelegramPlane} />
-                <TagLabel>@FortuneThere</TagLabel>
-              </Tag>
-            </ListItem>
             <ListItem>
               <Link href="https://github.com/FortuneHere" target="_blank">
                 <Button
@@ -167,9 +176,30 @@ const Page = () => {
                 </Button>
               </Link>
             </ListItem>
-            <ListItem ml={'15px'} mt={1}>
-              <Tag
+            <ListItem>
+              <Button
+                onClick={downloadPDF}
+                variant="ghost"
                 colorScheme="teal"
+                leftIcon={<Icon as={FaFilePdf} />}
+              >
+                Download PDF resume
+              </Button>
+            </ListItem>
+            <ListItem ml={'16px'} mt={2}>
+              <Tag
+                color={useColorModeValue('teal.600', 'teal.200')}
+                bg="transparent"
+                size={1}
+                fontWeight="bold"
+              >
+                <TagLeftIcon as={FaTelegramPlane} />
+                <TagLabel>@FortuneThere</TagLabel>
+              </Tag>
+            </ListItem>
+            <ListItem ml={'19px'} mt={2}>
+              <Tag
+                color={useColorModeValue('teal.600', 'teal.200')}
                 bg="transparent"
                 size={1}
                 fontWeight="bold"
@@ -178,15 +208,15 @@ const Page = () => {
                 <TagLabel>kekray777@gmail.com</TagLabel>
               </Tag>
             </ListItem>
-            <ListItem ml={'15px'} mt={3}>
+            <ListItem ml={'19px'} mt={2}>
               <Tag
-                colorScheme="teal"
+                color={useColorModeValue('teal.600', 'teal.200')}
                 bg="transparent"
                 size={1}
                 fontWeight="bold"
               >
                 <TagLeftIcon as={FaYandexInternational} />
-                <TagLabel>kekray777@yandex.ru</TagLabel>
+                <Text colorScheme="teal">kekray777@yandex.ru</Text>
               </Tag>
             </ListItem>
           </List>
