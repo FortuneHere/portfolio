@@ -33,7 +33,7 @@ const Page = () => {
           p={3}
           mb={6}
         >
-          Hello, I&apos;m a front-end developer based in Georgia, Tbilisi.
+          Hello, I&apos;m a front-end developer based in Russia, Kazan.
         </Box>
 
         <Box display={{ md: 'flex' }}>
@@ -98,7 +98,7 @@ const Page = () => {
           <Heading as="h3" variant="section-title">
             I enjoy
           </Heading>
-          <Paragraph>Music, Movies, Technology, Learning</Paragraph>
+          <Paragraph>Music, Movies, Videogames, Technology, Learning</Paragraph>
         </Section>
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
